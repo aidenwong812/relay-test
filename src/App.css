@@ -1,0 +1,138 @@
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 400;
+
+  --color-bg: #ffffff;
+  --color-text: #213547;
+  --color-primary: #646cff;
+  --color-primary-hover: #535bf2;
+  --color-button-bg: #f9f9f9;
+  --color-button-text: #213547;
+  --color-border: #ccc;
+  --color-pre-bg: #f8f8f8;
+
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #242424;
+    --color-text: rgba(255, 255, 255, 0.87);
+    --color-primary: #747bff;
+    --color-primary-hover: #646cff;
+    --color-button-bg: #1a1a1a;
+    --color-button-text: #ffffff;
+    --color-border: #444;
+    --color-pre-bg: #333;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+h2 {
+  color: var(--color-text);
+  font-size: 1.5em;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background-color: var(--color-bg);
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+button:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+pre {
+  background-color: var(--color-pre-bg);
+  color: var(--color-text);
+  padding: 15px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  input[type="text"], button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
