@@ -9,7 +9,7 @@ import { createLibp2p } from 'libp2p'
 
 const server = await createLibp2p({
   addresses: {
-    listen: ['/ip4/127.0.0.1/tcp/0/ws']
+    listen: ['/ip4/127.0.0.1/tcp/0/wss']
   },
   transports: [
     webSockets({
